@@ -2,7 +2,7 @@
 
 .navbar {
     padding: 2rem;
-    background-color: #f5f6f7;
+    background-color: #7ADE30;
 
 }
 
@@ -41,8 +41,26 @@ h1{
     font-family: 'Rubik Dirt', cursive;
 }
 
+.seccion-descripcion{
+    font-size: 1.2rem;
+    color: #584e4e;
+}
+
 .seccion-texto{
     font-size: 1.2rem;
+}
+
+.btn-info{
+    font-size: 1.1rem;
+    margin: 20px;
+}
+
+.texto-negro{
+    color: black;
+}
+
+.texto-blanco{
+    color: white;
 }
 
 /* Seccion Hero */
@@ -61,8 +79,12 @@ h1{
     width: 200px;
     height: 200px;
     margin: 2rem;
+    transition: all 0.2s ease-in;
 }
 
+.foto-perfil:hover{
+    box-shadow: 0 0 15px 10px #7ADE30;
+}
 
 .hero-principal h2{
     font-size: 1.5rem;
@@ -131,6 +153,135 @@ h1{
     margin: 5px;
 }
 
+
+/* Seccion Proyectos */
+.proyectos-recientes{
+    padding: 40px;
+}
+
+.proyectos-recientes img{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.2 ease;
+}
+
+.proyectos-contenedor{
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+
+.overlay{
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay p{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.proyecto{
+    position: relative;
+}
+
+.proyecto:hover img{
+    opacity: 0.2;
+}
+
+.proyecto:hover .overlay{
+    opacity: 1;
+}
+
+.overlay .iconos-contenedor{
+    display: flex;
+    
+}
+
+.overlay i{
+    font-size: 50px;
+    color: black;
+    margin: 10px;
+}
+
+/* Seccion Articulos */
+.articulos{
+    min-width: 500px;
+    padding: 60px;
+
+}
+
+.articulos .card{
+    width: 80%;
+    max-width: 600px;
+    margin: 20px;
+}
+
+.articulos .card-header{
+    font-weight: bold;
+}
+
+/* Seccion testimonios */
+
+.testimonios{
+    padding: 40px 40px 80px 40px;
+}
+
+.testimonios .carousel{
+    max-width: 800px;
+}
+
+.carousel-item{
+    height: 500px;
+}
+
+.carousel-item .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonio-imagen{
+    width: 150px;
+    height: 150px;
+    margin: 10px 10px 20px 10px;
+}
+
+.testimonio-texto{
+    max-width: 70%;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.testimonio-info{
+    font-weight: bold;
+    text-align: center;
+}
+
+.testimonio-info p{
+    margin-bottom: 0;
+}
+
+.testimonio-info .cliente{
+    font-size: 1.2rem;
+}
+
+.testimonio-info .cargo{
+   font-size: 0.9rem;
+}
+
 /* Adaptable (responsive) a dispositivos móviles */
 
 /* Si la pantalla se achica por debajo de 767px, el navbar-brand (logo) se oculta */
@@ -144,5 +295,15 @@ h1{
 @media screen and(min-width: 700px) {
     .hero-inferior-img{
         max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .overlay p{
+       font-size: 18px;
+    }
+
+    .overlay i{
+        font-size: 30px;
     }
 }
