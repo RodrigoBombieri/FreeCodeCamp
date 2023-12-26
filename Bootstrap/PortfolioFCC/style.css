@@ -385,6 +385,12 @@ footer{
     color: black;
 }
 
+.derechos-de-autor{
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+
 /* Adaptable (responsive) a dispositivos móviles */
 
 /* Si la pantalla se achica por debajo de 767px, el navbar-brand (logo) se oculta */
